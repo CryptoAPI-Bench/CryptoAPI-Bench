@@ -1,0 +1,10 @@
+.idea
+*.iml
+.gradle
+gradle
+gradlew
+gradlew.bat
+out
+cov-int
+myproject.tgz
+build
