@@ -12,7 +12,7 @@ The `CryptoAPI-Bench_details.xlsx` contains the summary of secure and nonsecure 
 
 
 ### Paper
-If you use this code or these benchmarks in your research, please cite the following publication.
+If you use this code or these benchmarks in your research, please cite the following publications.
 ```
 @inproceedings{afrose2019cryptoapi,
   title={CryptoAPI-Bench: A Comprehensive Benchmark on Java Cryptographic API Misuses},
