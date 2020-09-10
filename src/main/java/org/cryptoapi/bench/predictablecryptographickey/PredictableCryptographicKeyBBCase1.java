@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class PredictableCryptographicKeyBBCase1 {
     public static void main(String [] args){
-        String defaultKey = "SecDev2019";
+        String defaultKey = "SecDev2020";
         byte[] keyBytes = defaultKey.getBytes();
         keyBytes = Arrays.copyOf(keyBytes,16);
         SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
