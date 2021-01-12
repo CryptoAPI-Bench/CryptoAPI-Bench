@@ -5,7 +5,7 @@ import java.security.Key;
 import java.security.SecureRandom;
 import javax.crypto.KeyGenerator;
 
-public class BrokenMacBBCase1 {
+public class BrokenMacCorrected{
    public static void main(String args[]) throws Exception {
       KeyGenerator keyGen = KeyGenerator.getInstance("AES");
       SecureRandom secRandom = new SecureRandom();
