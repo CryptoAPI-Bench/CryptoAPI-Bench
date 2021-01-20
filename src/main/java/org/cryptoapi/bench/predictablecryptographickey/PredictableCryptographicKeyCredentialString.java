@@ -9,7 +9,7 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Base64;
 
-public class PredictableCryptographicKeyCorrected {
+public class PredictableCryptographicKeyCredentialString {
     public static void main(String [] args) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, IOException, IllegalBlockSizeException, BadPaddingException, ClassNotFoundException {
         SecureRandom random = new SecureRandom();
         String defaultKey = String.valueOf(random.ints());
