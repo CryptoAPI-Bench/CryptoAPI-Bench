@@ -11,11 +11,10 @@ public class PredictableCryptographicKeyABPSCase1 {
 
         if(choice>1){
             SecureRandom random = new SecureRandom();
-            keyBytes = String.valueOf(random.ints()).getBytes();
+            byte [] keyBytes = new byte[16];
+            random.nextBytes(keyBytes);
         }
-
-        keyBytes = Arrays.copyOf(keyBytes,16);
-
+        
         SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
     }
 
