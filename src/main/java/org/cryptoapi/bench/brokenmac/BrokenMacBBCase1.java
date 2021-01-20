@@ -14,7 +14,7 @@ public class BrokenMacBBCase1 {
       
 
       Mac mac = Mac.getInstance("HmacMD5");
-      mac.init(key)
+      mac.init(key);
 
       String msg = new String("TSE2021");
       byte[] bytes = msg.getBytes();      
