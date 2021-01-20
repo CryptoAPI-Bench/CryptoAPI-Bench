@@ -10,7 +10,7 @@ public class BrokenMacCorrected{
       KeyGenerator keyGen = KeyGenerator.getInstance("AES");
       SecureRandom secRandom = new SecureRandom();
       keyGen.init(secRandom);
-	  Key key = keyGen.generateKey();	 
+      Key key = keyGen.generateKey();	 
       
 
       Mac mac = Mac.getInstance("HmacSHA256");
