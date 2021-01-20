@@ -14,7 +14,7 @@ public class BrokenMacCorrected{
       
 
       Mac mac = Mac.getInstance("HmacSHA256");
-      mac.init(key)
+      mac.init(key);
 
       String msg = new String("TSE2021");
       byte[] bytes = msg.getBytes();      
