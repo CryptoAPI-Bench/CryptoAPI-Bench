@@ -12,12 +12,20 @@ public class PredictableCryptographicKeyABHCase2 {
         Map<String, Integer> hm = new HashMap<String, Integer>();
         hm.put("aaa", 32);
         hm.put("bbb", 33);
-        byte [] key;
+        byte [] key = new byte [5];
         int idx = hm.get("aaa");
         if (idx == 32) {
-            key = {20,10,30,5,5,6,8,7};
+            key[0] = 20;
+	        key[1] = 30;
+            key[2] = 40;
+            key[3] = 50;
+            key[4] = 10;
         } else {
-            key = {20,10,30,5,5,6,8,7};
+            key[0] = 25;
+	        key[1] = 35;
+            key[2] = 45;
+            key[3] = 55;
+            key[4] = 15;
         }
 
         byte [] keyBytes = key.getBytes();
