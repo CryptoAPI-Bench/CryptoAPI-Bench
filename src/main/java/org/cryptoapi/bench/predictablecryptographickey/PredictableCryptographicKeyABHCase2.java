@@ -28,7 +28,7 @@ public class PredictableCryptographicKeyABHCase2 {
             key[4] = 15;
         }
 
-        byte [] keyBytes = key.getBytes();
+        byte [] keyBytes = key;
         keyBytes = Arrays.copyOf(keyBytes,16);
         SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
     }
