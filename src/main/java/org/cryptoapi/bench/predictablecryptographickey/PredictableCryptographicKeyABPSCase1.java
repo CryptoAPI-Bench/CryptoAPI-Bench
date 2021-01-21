@@ -11,7 +11,6 @@ public class PredictableCryptographicKeyABPSCase1 {
 
         if(choice>1){
             SecureRandom random = new SecureRandom();
-            byte [] keyBytes = new byte[16];
             random.nextBytes(keyBytes);
         }
         
