@@ -16,9 +16,12 @@ public class PredictableCryptographicKeyABSCase1 {
         String passKey = PredictableCryptographicKeyABSCase1.getKey("pass.key");
 
         if(passKey == null) {
-            crypto = new Crypto("defaultkey");
+            byte defaultKey[] = {20,10,30,5,5,6,8,7};
+            crypto = new Crypto(defaultKey);
         }
-        crypto = new Crypto(passKey);
+        else {
+            crypto = new Crypto(passKey.getBytes("UTF-8"));
+        }
     }
 
     byte[] encryptPass(String pass, String src) throws IllegalBlockSizeException, BadPaddingException, InvalidKeyException, UnsupportedEncodingException {
@@ -35,17 +38,17 @@ class Crypto {
     Cipher cipher;
     String algoSpec = "AES/CBC/PKCS5Padding";
     String algo = "AES";
-    String defaultKey;
-    public Crypto(String defkey) throws NoSuchPaddingException, NoSuchAlgorithmException {
+    byte [] defaultKey;
+    public Crypto(byte [] defkey) throws NoSuchPaddingException, NoSuchAlgorithmException {
         cipher = Cipher.getInstance(algoSpec);
         defaultKey = defkey;
     }
 
-    public byte[] method1(String txt, String key) throws UnsupportedEncodingException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
+    public byte[] method1(String txt, byte [] key) throws UnsupportedEncodingException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
         if(key.isEmpty()){
             key = defaultKey;
         }
-        byte[] keyBytes = key.getBytes("UTF-8");
+        byte[] keyBytes = key
         byte [] txtBytes = txt.getBytes();
         keyBytes = Arrays.copyOf(keyBytes,16);
 
