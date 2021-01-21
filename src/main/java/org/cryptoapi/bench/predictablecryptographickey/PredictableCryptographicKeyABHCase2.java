@@ -9,13 +9,16 @@ import java.util.Map;
 public class PredictableCryptographicKeyABHCase2 {
     public static void main(String [] args) throws UnsupportedEncodingException {
 
-        Map<String,String> hm = new HashMap<String, String>();
-        hm.put("aaa", "afix");
-        hm.put("bbb", "bfix");
-        hm.put("ccc", "cfix");
-        hm.put("ddd", "dfix");
-
-        String key = hm.get("aaa");
+        Map<String, Integer> hm = new HashMap<String, Integer>();
+        hm.put("aaa", 32);
+        hm.put("bbb", 33);
+        byte [] key;
+        int idx = hm.get("aaa");
+        if (idx == 32) {
+            key = {20,10,30,5,5,6,8,7};
+        } else {
+            key = {20,10,30,5,5,6,8,7};
+        }
 
         byte [] keyBytes = key.getBytes();
         keyBytes = Arrays.copyOf(keyBytes,16);
