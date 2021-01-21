@@ -48,7 +48,7 @@ class Crypto {
         if(key.isEmpty()){
             key = defaultKey;
         }
-        byte[] keyBytes = key
+        byte[] keyBytes = key;
         byte [] txtBytes = txt.getBytes();
         keyBytes = Arrays.copyOf(keyBytes,16);
 
