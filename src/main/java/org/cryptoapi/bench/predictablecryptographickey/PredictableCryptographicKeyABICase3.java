@@ -4,16 +4,16 @@ import java.util.Arrays;
 
 public class PredictableCryptographicKeyABICase3 {
     public static void main(String [] args){
-        String key = "defaultkey";
+        byte key[] = {20,10,30,5,5,6,8,7};
         method1(key);
     }
-    public static void method1(String k){
-        String key2 = k;
-        method2(key2);
+    
+    public static void method1(byte [] k){
+        method2(k);
     }
 
-    private static void method2(String key) {
-        byte[] keyBytes = key.getBytes();
+    private static void method2(byte [] key) {
+        byte[] keyBytes = key;
         keyBytes = Arrays.copyOf(keyBytes,16);
         SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
     }
